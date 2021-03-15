@@ -246,7 +246,7 @@ export const prompts = {
                         assassin:0,
                         druid:0,
                         sorcerer:0,
-                        arcanist:3,
+                        arcanist:0,
                     }
                 },
                 {
@@ -257,8 +257,8 @@ export const prompts = {
                         brute:0,
                         ranger:0,
                         assassin:0,
-                        druid:3,
-                        sorcerer:2,
+                        druid:0,
+                        sorcerer:1,
                         arcanist:3,
                     }
                 },
@@ -292,7 +292,7 @@ export const prompts = {
                     selected:false,
                     answer:"Being a jack of all trades and being able to fit into any scenario",
                     points:{
-                        champion:1,
+                        champion:0,
                         brute:0,
                         ranger:2,
                         assassin:0,

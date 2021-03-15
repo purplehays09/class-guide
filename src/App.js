@@ -49,13 +49,19 @@ function App() {
   },[questions])
 
   const handleChange = (e) => {
-    const {name, value, id, question} = e.target
+    // debugger
+    const {name, value, id} = e.target
     // console.log('name',name || 'fail')
     // console.log('value',value)
     // console.log('id',id)
     // console.log('questions[value][name].options[id].answer',questions[value][name].options[id].answer)
+    // console.log('name', name)
 
-    const index = questions[value].findIndex(() => questions[value].question === question)
+    // console.log('questions[value]',questions[value])
+    const index = questions[value].findIndex((inst) => {
+      // console.log('inst',inst)
+      return inst.question === name
+    })
 
     // console.log('index',index)
     // console.log('questions prechange', questions)
@@ -66,7 +72,10 @@ function App() {
       replacement[value][index].options[answer].selected = false
     }
 
-    replacement[value][index].options[id].selected = !questions[value][index].options[id].selected
+    // replacement[value][index].options[id].selected = !questions[value][index].options[id].selected
+    // console.log(replacement[value][index].options)
+    // console.log(replacement[value][index].options[id])
+    replacement[value][index].options[id].selected = true
     // console.log('replacement', replacement)
 
     setQuestions(replacement)
