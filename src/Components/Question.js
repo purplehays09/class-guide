@@ -16,10 +16,10 @@ export default function Question(props){
                         <input 
                             type="radio" 
                             id={idx} 
-                            name={option.answer} 
+                            name={question.question} 
                             value={section}
                             key={idx}
-                            onClick={handleChange}
+                            onChange={handleChange}
                             question={question.question}
                         />
                             {option.answer}

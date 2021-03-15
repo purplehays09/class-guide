@@ -62,6 +62,9 @@ function App() {
     // console.log('questions[value][index].options[id]',questions[value][index].options[id])
 
     const replacement = {...questions}
+    for(const answer in replacement[value][index].options){
+      replacement[value][index].options[answer].selected = false
+    }
 
     replacement[value][index].options[id].selected = !questions[value][index].options[id].selected
     // console.log('replacement', replacement)
